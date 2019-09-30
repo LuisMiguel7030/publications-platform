@@ -1,0 +1,11 @@
+.top-menu {
+
+    background-color: #ffff;
+    border-bottom: 1.5px rgba(134, 134, 134, 0.432) solid;
+    padding: 16px;
+    box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.09);
+
+    &__title {
+        font-size: 16px;
+    }
+}

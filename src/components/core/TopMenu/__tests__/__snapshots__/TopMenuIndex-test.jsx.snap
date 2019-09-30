@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sign in page form renders correctly 1`] = `
+<TopMenu
+  title={null}
+>
+  <header
+    className="top-menu"
+  >
+    <h1
+      className="top-menu__title"
+    />
+  </header>
+</TopMenu>
+`;

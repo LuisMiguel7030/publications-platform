@@ -1,0 +1,49 @@
+.publications-index-page {
+    margin: 30px;
+
+    .publications {
+        margin-bottom: 30px;
+
+        &--write-status {
+
+            &__button {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+
+        &--status {
+
+            .publications-header {
+                width: 100%;
+                overflow: hidden;
+
+                &__icon,
+                &__name {
+                    float: left;
+                }
+
+                &__icon {
+                    height: 50px;
+                }
+
+                &__name {
+                    color: #59c678;
+                    margin-left: 25px;
+                    font: {
+                        size: 16px;
+                        weight: bold;
+                    }
+                }
+            }
+
+            &__text {
+                margin: 0 {
+                    left: 75px;
+                    bottom: 20px;
+                }
+                font-weight: 500;
+            }
+        }
+    }
+}
