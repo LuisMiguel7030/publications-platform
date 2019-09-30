@@ -1,19 +1,22 @@
 import './cardActions.scss';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 function CardContent({ className, children }) {
 
+    const getClassName = () => classNames('card-actions', className);
+
     return (
-        <div className={`card-actions ${className}`}>
+        <div className={getClassName()}>
             {children}
         </div>
     )
 }
 
 CardContent.propTypes = {
-    className: PropTypes.string,
-    children: PropTypes.node
+    children: PropTypes.node,
+    className: PropTypes.string
 };
 
 export default CardContent;

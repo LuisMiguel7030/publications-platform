@@ -27,9 +27,8 @@ function PublicationsIndexPage() {
         setPublication(event.target.value);
     };
 
-    const renderPublicationsStatus = ({ name, status, comments, index}) => (
-        <section className="publications publications--status" key={index}>
-            <Card>
+    const renderPublicationStatus = ({ name, status, comments, index}) => (
+            <Card className="publications--status__card" key={index} >
                 <Card.Content>
                     <div className="publications-header">
                         <User className="publications-header__icon"/>
@@ -41,7 +40,12 @@ function PublicationsIndexPage() {
                     <span>{`${comments} comentarios`}</span>
                 </Card.Actions>
             </Card>
-        </section>
+    );
+
+    const renderPublicationsList = () =>(
+        status.map( (info, index) =>
+            renderPublicationStatus({...info, index})
+        ).reverse()
     );
 
     return (
@@ -64,7 +68,9 @@ function PublicationsIndexPage() {
                 </Card>
             </section>
 
-            {status.map( (info, index) => renderPublicationsStatus({...info, index})).reverse()}
+            <section className="publications publications--status">
+                {renderPublicationsList()}
+            </section>
         </div>
     )
 }
